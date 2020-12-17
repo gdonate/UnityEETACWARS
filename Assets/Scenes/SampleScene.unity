@@ -206,6 +206,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &801003819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3499070572632610265, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+  m_PrefabInstance: {fileID: 3499070572917690864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &801003823
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801003819}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1236835068
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +392,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1348460311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3499070573104827589, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+  m_PrefabInstance: {fileID: 3499070572917690864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &1348460315
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348460311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!1 &1881631269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3499070573156338049, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+  m_PrefabInstance: {fileID: 3499070572917690864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!19719996 &1881631273
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881631269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1001 &3499070572917690864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +441,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3499070573104827589, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499070573156338049, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3499070573361688188, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
       propertyPath: m_Name
       value: Grid
