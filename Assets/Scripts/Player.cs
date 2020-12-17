@@ -35,8 +35,13 @@ public class Player : MonoBehaviour
             speed * Time.deltaTime
         );
         */
+        if (mov != Vector2.zero){
         anim.SetFloat("movX", mov.x);
         anim.SetFloat("movY", mov.y);
+        anim.SetBool("walking", true);
+        }else{
+            anim.SetBool("walking", false);
+        }
         
     }
     void FixedUpdate(){

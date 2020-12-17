@@ -497,5 +497,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948273851992171226, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226214530874707417, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226214530874707417, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226214530874707417, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226214530874707417, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
+      propertyPath: m_MaximumTileChangeCount
+      value: 800
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d45413dc6ccb8014dab40e5767372a11, type: 3}
