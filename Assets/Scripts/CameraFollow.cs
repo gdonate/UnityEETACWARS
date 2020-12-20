@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform Player;
     Vector3 vel = Vector3.zero;
     public float Tiemsua = .15f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,5 @@ public class CameraFollow : MonoBehaviour
 
         transform.position = Vector3.SmoothDamp(transform.position, Pospla, ref vel, Tiemsua);
     }
-
+   
 }
