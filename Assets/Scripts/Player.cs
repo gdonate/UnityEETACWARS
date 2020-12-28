@@ -56,9 +56,21 @@ public class Player : MonoBehaviour
         }
         
         //Vamos actualizando la posicion del vector de ataque
-        if (mov != Vector2.zero) 
+        if (mov != Vector2.zero) attackCollider.offset = new Vector2(mov.x/2, mov.y/2);
+        
+        //Activamos el Collider a la mitad de la animacion
+        if(attacking)
         {
-            attackCollider.offset = new Vector2(mov.x/2, mov.y/2);
+            float playbackTime = stateInfo.normalizedTime;
+            if (playbackTime > 0.33 && playbackTime < 0.66) 
+            {
+                attackCollider.enabled = true;
+            }
+            else 
+            {
+                attackCollider.enabled = false;
+            }
+
         }
     }
     void FixedUpdate(){

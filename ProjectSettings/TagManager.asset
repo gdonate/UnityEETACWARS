@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - BlockingLayer
-  - 
+  - Player
   - Attack
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 2698906999
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
