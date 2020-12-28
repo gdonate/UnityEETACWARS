@@ -8,11 +8,14 @@ public class Player : MonoBehaviour
     Animator anim;
     Rigidbody2D rb2d;
     Vector2 mov; //Ahora es visible entre los metodos
+    CircleCollider2D attackCollider;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+
+        attackCollider =transform.GetChild(0).GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -42,7 +45,21 @@ public class Player : MonoBehaviour
         }else{
             anim.SetBool("walking", false);
         }
+
+        //Buscamos el estado actual miranod la informacion del animador
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        bool attacking = stateInfo.IsName("PlayerAttack");
+        //Detectamos el ataque, tiene prioridad por lo que va abajo del todo
+        if (Input.GetKeyDown("space") && !attacking)
+        {
+            anim.SetTrigger("attacking");
+        }
         
+        //Vamos actualizando la posicion del vector de ataque
+        if (mov != Vector2.zero) 
+        {
+            attackCollider.offset = new Vector2(mov.x/2, mov.y/2);
+        }
     }
     void FixedUpdate(){
         //Nos movemos en el fixed por las fisicas
