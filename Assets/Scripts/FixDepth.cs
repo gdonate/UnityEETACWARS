@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FixDepth : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class FixDepth : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Variable para actualizar la profundidad en cada fotograma
+    public bool fixEveryFrame;
+    SpriteRenderer spr;
+
+	void Start () {
+        spr = GetComponent<SpriteRenderer>();
+        spr.sortingLayerName = "Player";
+        spr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+	}
+
+	void Update () {
+        if (fixEveryFrame) {
+            spr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+        }
+	}
 }
