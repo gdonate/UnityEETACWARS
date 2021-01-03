@@ -9,9 +9,11 @@ public class Enemies : MonoBehaviour
     public float speed;
     public float attackRadius;
     
-    public float attackSpeed;
+    
+    [Tooltip("Prefab de la roca")]
     public GameObject rockPrefab;
-        
+    [Tooltip("Velocidad de ataque")]
+    public float attackSpeed;
     bool attacking;
 
     GameObject player;
@@ -19,6 +21,7 @@ public class Enemies : MonoBehaviour
     Animator anim;
 
     Vector3 initialPosition;
+    Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class Enemies : MonoBehaviour
         initialPosition = transform.position;
        
         anim = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -54,6 +58,15 @@ public class Enemies : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
  
         Debug.DrawLine(transform.position, target, Color.green);
+
+            
+        if (dist < attackRadius)
+        {
+            attacking = true;
+            Instantiate (rockPrefab, transform.position, transform.rotation);
+            attacking = false;
+        }
+        
     }
 
     void OnDrawGizmos()
@@ -64,16 +77,5 @@ public class Enemies : MonoBehaviour
         
     }
 
-    void Attack(float seconds)
-    {
-        attacking = true;
-
-        if (target != initialPosition && rockPrefab != null)
-        {
-            Instantiate (rockPrefab, transform.position, transform.rotation);
-            yield return new WaitForSeconds(seconds);
-
-        }
-        attacking = false;
-    }
+    
 }
