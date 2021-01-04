@@ -16,6 +16,12 @@ public class Enemies : MonoBehaviour
     public float attackSpeed = 2f;
     bool attacking;
 
+//Variables para la vida del enemigo//
+    [Tooltip("Puntos de vida")]
+    public int maxHP = 3;
+    [Tooltip("Vida actual")]
+    public int hp;
+
     GameObject player;
 
     Animator anim;
@@ -31,6 +37,9 @@ public class Enemies : MonoBehaviour
        
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        
+        //Iniciamos la vida del enemigo al maximo//
+        hp = maxHP;
     }
 
     // Update is called once per frame
@@ -83,4 +92,29 @@ public class Enemies : MonoBehaviour
         }
         attacking = false;
     }
+
+    //Función para restar una vida cuando ha sido atacado//
+    public void Attacked()
+    {
+        if (--hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+/*
+    void OnGUI()
+    {
+        //Este es el vector donde va estar el enemigo en todo momento//
+        Vector2 pos = Camera.main.WorldToScreenPoint (transform.position);
+
+        //Dibujamos un cuadrado debajo del enemigo para ver el hp//
+        GUI.Box(
+            new Rect(
+                pos.x = 350,                 //posicion x de la barra//
+                Screen.height - pos.y +40,  //posicion y de la barra//
+                30,                         //anchura de la barra//
+                20                          //altura de la barra//
+            ), hp + "/" + maxHP             //texto de la barra//
+        );
+    } */
 }
