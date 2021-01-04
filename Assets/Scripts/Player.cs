@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 
 public class Player : MonoBehaviour
@@ -14,11 +14,6 @@ public class Player : MonoBehaviour
 
     //Variables para tener el contador de la vida//
     
-    public Image Corazon;
-    public int cantDeCorazon;
-    public RectTransform PosicionPrimerCorazon;
-    public Canvas MyCanvas;
-    public int OffSett;
     // Start is called before the first frame update
     void Start()
     {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2401359638024109565}
   - component: {fileID: 8165336902840725838}
   - component: {fileID: 1385727519013448428}
+  - component: {fileID: -2973952656720648572}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
@@ -169,3 +170,19 @@ MonoBehaviour:
   attackRadius: 1
   rockPrefab: {fileID: 5311754065099714100, guid: 9e706024e5895e644b2aa7ec7d79ef0f, type: 3}
   attackSpeed: 1
+  maxHP: 3
+  hp: 0
+--- !u!114 &-2973952656720648572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385727519013448429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443589b7fa7b6e8468a74f3504df86d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantidad: -20
+  damageTime: 0
