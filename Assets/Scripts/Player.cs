@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +11,14 @@ public class Player : MonoBehaviour
     Rigidbody2D rb2d;
     Vector2 mov; //Ahora es visible entre los metodos
     CircleCollider2D attackCollider;
+
+    //Variables para tener el contador de la vida//
+    
+    public Image Corazon;
+    public int cantDeCorazon;
+    public RectTransform PosicionPrimerCorazon;
+    public Canvas MyCanvas;
+    public int OffSett;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +26,9 @@ public class Player : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         attackCollider =transform.GetChild(0).GetComponent<CircleCollider2D>();
+        
+       
+
     }
 
     // Update is called once per frame
