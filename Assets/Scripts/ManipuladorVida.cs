@@ -8,7 +8,7 @@ public class ManipuladorVida : MonoBehaviour
     VidaPlayer playerVida;
 
     public int cantidad;
-    public float damageTime;
+   // public float damageTime;
     float currentDamageTime;
 
 
@@ -19,18 +19,18 @@ public class ManipuladorVida : MonoBehaviour
     }
 
     
-    private void OnTriggerStay( Collider other)
+    private void OnTriggerEnter2D( Collider other)
     {
         if (other.tag == "Player")
         {
-            currentDamageTime += Time.deltaTime;
+            playerVida.vida -= cantidad;
 
             //Para recuperar vida//
-            if (currentDamageTime > damageTime)
+            /*if (currentDamageTime > damageTime)
             {
                 playerVida.vida += cantidad;
                 currentDamageTime = 0.0f;
-            }
+            }*/
         }
     }
 }

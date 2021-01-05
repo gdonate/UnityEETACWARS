@@ -8,13 +8,13 @@ public class VidaPlayer : MonoBehaviour
 {
    public float vida = 100;
 
-   public Image barraVida;
+   public Image barraDeVida;
 
     // Update is called once per frame
     void Update()
     {
         vida = Mathf.Clamp (vida, 0, 100);
 
-        barraVida.fillAmount = vida / 100;
+        barraDeVida.fillAmount += vida / 100;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -14,11 +15,13 @@ public class Player : MonoBehaviour
 
     //Variables para tener el contador de la vida//
     
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        
 
         attackCollider =transform.GetChild(0).GetComponent<CircleCollider2D>();
         
@@ -81,8 +84,11 @@ public class Player : MonoBehaviour
 
         }
     }
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         //Nos movemos en el fixed por las fisicas
         rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
     }
+
+    
 }
